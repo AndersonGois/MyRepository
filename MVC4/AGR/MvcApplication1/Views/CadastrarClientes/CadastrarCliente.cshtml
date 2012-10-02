@@ -1,0 +1,27 @@
+﻿@model AGR.Domain.Repository.Clientes
+
+@{
+    ViewBag.Title = "CadastrarCliente";
+}
+
+<h2>CadastrarCliente</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Clientes</legend>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

@@ -122,6 +122,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\CadastrarClientesController.cs" />
     <Compile Include="Controllers\ClientesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -256,6 +257,15 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Clientes\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AGR.Domain\AGR.Domain.csproj">
+      <Project>{3BDEAC43-E211-4F78-BBA0-0A66E4A0B4A2}</Project>
+      <Name>AGR.Domain</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\CadastrarClientes\CadastrarCliente.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
