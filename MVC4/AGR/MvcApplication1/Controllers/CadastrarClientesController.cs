@@ -11,7 +11,7 @@ namespace MvcApplication1.Controllers
         //
         // GET: /CadastrarClientes/
 
-        public ActionResult Index()
+        public ActionResult CadastrarCliente()
         {
             return View();
         }

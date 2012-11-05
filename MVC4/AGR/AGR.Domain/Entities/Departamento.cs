@@ -4,18 +4,18 @@ using AGR.Domain.Interfaces;
 
 namespace AGR.Domain.Entities
 {
-    public class Departamento : IAggregateRoot<int>
+    public  class Departamento : IAggregateRoot<int>
     {
-        public virtual int Id { get; set; }
-        public virtual string Nome { get; set; }
-        public virtual IList<Cliente> Clientes { get; set; }
+        public int Id { get; set; }
+        public string Nome { get; set; }
+        public IList<Cliente> Clientes { get; set; }
 
         public Departamento()
         {
-           Clientes = new List<Cliente>();
+            Clientes = new List<Cliente>();
         }
 
-        public virtual void Adicionar(Cliente cliente)
+        public void Adicionar(Cliente cliente)
         {
             Clientes.Add(cliente);
         }

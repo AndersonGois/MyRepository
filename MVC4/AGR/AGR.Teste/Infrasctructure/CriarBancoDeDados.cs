@@ -8,13 +8,13 @@ using AGR.Domain.Entities;
 namespace AGR.Teste.Infrasctructure
 {
     [TestFixture]
-    [Ignore]
+    //[Ignore]
     public class CriarBancoDeDadosTest
     {
         [Test]
         public void a_Criar_Banco_De_Dados_Por_Modelo()
         {
-            Fluently.Configure().Database(MsSqlConfiguration.MsSql2005.ConnectionString(c => c
+            Fluently.Configure().Database(MsSqlConfiguration.MsSql2008.ConnectionString(c => c
            .FromAppSetting("Conexao")
             )).Mappings(m => m.FluentMappings.AddFromAssemblyOf<Cliente>()).Mappings(m => m.MergeMappings())
             .ExposeConfiguration(BuildSchema).BuildSessionFactory();
